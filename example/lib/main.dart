@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -88,6 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final imageData = await photo.readAsBytes();
     final decodedImage = image.decodeImage(imageData);
+    if (decodedImage == null) {
+      return [];
+    }
     final scaledImage = image.copyResize(decodedImage, width: 500);
     final jpg = image.encodeJpg(scaledImage, quality: 90);
 
