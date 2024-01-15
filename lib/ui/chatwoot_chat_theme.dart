@@ -169,5 +169,7 @@ class ChatwootChatTheme extends ChatTheme {
       ),
     ),
     super.userAvatarImageBackgroundColor = Colors.transparent,
+    super.inputSurfaceTintColor = Colors.transparent,
+    super.inputElevation = 0,
   });
 }
