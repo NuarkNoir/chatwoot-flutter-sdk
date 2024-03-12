@@ -13,7 +13,7 @@ const ERROR = Color(0xFFF44336);
 
 /// Default chatwoot chat theme which extends [ChatTheme]
 @immutable
-class ChatwootChatTheme extends ChatTheme {
+class ChatwootChatTheme extends DefaultChatTheme {
   /// Creates a chatwoot chat theme. Use this constructor if you want to
   /// override only a couple of variables.
   const ChatwootChatTheme({
@@ -128,48 +128,6 @@ class ChatwootChatTheme extends ChatTheme {
     ),
     super.messageInsetsHorizontal = 20,
     super.messageInsetsVertical = 16,
-    super.receivedEmojiMessageTextStyle = const TextStyle(fontSize: 40),
     super.sendButtonMargin,
-    super.sentEmojiMessageTextStyle = const TextStyle(fontSize: 40),
-    super.statusIconPadding = const EdgeInsets.symmetric(horizontal: 4),
-    super.systemMessageTheme = const SystemMessageTheme(
-      margin: EdgeInsets.only(
-        bottom: 24,
-        top: 8,
-        left: 8,
-        right: 8,
-      ),
-      textStyle: TextStyle(
-        color: neutral7,
-        fontSize: 12,
-        fontWeight: FontWeight.w800,
-        height: 1.333,
-      ),
-    ),
-    super.typingIndicatorTheme = const TypingIndicatorTheme(
-      animatedCirclesColor: neutral7,
-      animatedCircleSize: 5.0,
-      bubbleBorder: BorderRadius.all(Radius.circular(27.0)),
-      bubbleColor: dark,
-      countAvatarColor: primary,
-      countTextColor: secondary,
-      multipleUserTextStyle: TextStyle(
-        fontSize: 12,
-        fontWeight: FontWeight.w500,
-        color: neutral2,
-      ),
-    ),
-    super.unreadHeaderTheme = const UnreadHeaderTheme(
-      color: secondaryDark,
-      textStyle: TextStyle(
-        color: neutral7WithOpacity,
-        fontSize: 12,
-        fontWeight: FontWeight.w500,
-        height: 1.333,
-      ),
-    ),
-    super.userAvatarImageBackgroundColor = Colors.transparent,
-    super.inputSurfaceTintColor = Colors.transparent,
-    super.inputElevation = 0,
   });
 }
